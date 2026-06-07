@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌴 Ghid Tenerife — Vacanță în familie (10–19 iulie)</title>
+<style>
+  :root{
+    --turq:#0fb8c4; --turq-d:#0a8c96; --orange:#ff7a3c; --sun:#ffc83d;
+    --ink:#13343b; --muted:#5b7077; --bg:#f3fbfc; --card:#ffffff;
+    --line:#dceff1; --shadow:0 6px 24px rgba(15,184,196,.10);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);
+    background:linear-gradient(180deg,#e8f9fb 0%,var(--bg) 280px);line-height:1.55}
+  a{color:var(--turq-d)}
+  header.hero{background:linear-gradient(120deg,var(--turq) 0%,var(--turq-d) 55%,#0a6f8a 100%);
+    color:#fff;padding:38px 18px 30px;text-align:center;position:relative;overflow:hidden}
+  header.hero::after{content:"🌴🌊☀️🐬🌋";position:absolute;right:-10px;top:8px;font-size:34px;opacity:.18;letter-spacing:6px}
+  .hero h1{margin:0 0 6px;font-size:clamp(24px,5vw,40px)}
+  .hero p{margin:4px 0;opacity:.95;font-size:15px}
+  .hero .meta{display:inline-flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
+  .hero .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:5px 12px;border-radius:30px;font-size:13px;backdrop-filter:blur(4px)}
+  nav.toc{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);padding:10px 12px;display:flex;gap:8px;overflow-x:auto;
+    box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  nav.toc a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:13px;font-weight:600;
+    padding:6px 12px;border-radius:20px;background:#eef8fa;border:1px solid var(--line);transition:.15s}
+  nav.toc a:hover{background:var(--turq);color:#fff;border-color:var(--turq)}
+  main{max-width:1080px;margin:0 auto;padding:24px 16px 60px}
+  .intro{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;
+    margin-bottom:26px;box-shadow:var(--shadow)}
+  .intro h2{margin:0 0 8px;font-size:18px}
+  .note{background:#fff7ed;border:1px solid #ffd9b8;border-radius:12px;padding:12px 14px;font-size:13.5px;color:#8a4b1f;margin-top:12px}
+  section.itin{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:0;
+    margin-bottom:26px;box-shadow:var(--shadow);overflow:hidden}
+  .itin-head{padding:18px 20px;background:linear-gradient(100deg,#eafafb,#fff);border-bottom:1px solid var(--line)}
+  .itin-head h2{margin:0;font-size:21px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .zone{font-size:12px;font-weight:700;color:#fff;background:var(--orange);padding:3px 10px;border-radius:20px}
+  .badges{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+  .badge{font-size:12px;background:#eef8fa;border:1px solid var(--line);padding:3px 10px;border-radius:20px;color:var(--muted)}
+  .summary{margin-top:10px;font-size:14px;color:var(--muted)}
+  .timeline{padding:8px 20px 20px}
+  .step{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .step:last-child{border-bottom:none}
+  .time{flex:0 0 64px;font-weight:800;color:var(--turq-d);font-size:14px;padding-top:2px}
+  .step-body{flex:1;min-width:0}
+  .step-body h3{margin:0 0 4px;font-size:16.5px}
+  .step-body .kind{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--orange)}
+  .step-body p{margin:6px 0;font-size:14px;color:#33474d}
+  .facts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .fact{font-size:12.5px;background:#f4fbfc;border:1px solid var(--line);border-radius:8px;padding:3px 9px}
+  .fact b{color:var(--ink)}
+  .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;font-weight:600;
+    padding:7px 13px;border-radius:10px;border:1px solid transparent;transition:.15s}
+  .btn-map{background:var(--turq);color:#fff}
+  .btn-map:hover{background:var(--turq-d)}
+  .btn-yt{background:#fff;color:#c4302b;border-color:#f3c6c4}
+  .btn-yt:hover{background:#fff0ef}
+  .meal{background:#fffaf2;border-left:4px solid var(--sun)}
+  .meal .kind{color:#c98a00}
+  .cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+  .cat-filters button{cursor:pointer;font-size:13px;font-weight:600;padding:7px 14px;border-radius:20px;
+    border:1px solid var(--line);background:#fff;color:var(--ink);transition:.15s}
+  .cat-filters button.active{background:var(--turq);color:#fff;border-color:var(--turq)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .card h3{margin:0 0 2px;font-size:15.5px}
+  .card .tag{font-size:11px;font-weight:700;color:var(--turq-d);text-transform:uppercase;letter-spacing:.4px}
+  .card p{font-size:13px;color:#33474d;margin:7px 0;flex:1}
+  .card .acts{margin-top:auto}
+  .search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);font-size:14px;margin-bottom:14px;background:#fff}
+  footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:13px}
+  .legend{font-size:12.5px;color:var(--muted);margin-top:6px}
+  @media(max-width:560px){.time{flex-basis:52px;font-size:13px}.hero h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>🌴 Ghid Tenerife — Vacanța Familiilor</h1>
+  <p>10 – 19 iulie · 3 familii · 6 adulți & 4 copii (5, 8, 10, 15 ani) · 3 mașini închiriate</p>
+  <p>Bază în sud: <b>Ona Sueño Azul</b> / <b>Royal Tenerife Country Club</b> (Adeje)</p>
+  <div class="meta">
+    <span class="chip">🗺️ 10 itinerarii (10:00 → 18:00+)</span>
+    <span class="chip">🍽️ Prânz 13–15</span>
+    <span class="chip">🏖️ Plajă + activități</span>
+    <span class="chip">📍 50 atracții</span>
+  </div>
+</header>
+
+<nav class="toc" id="toc"></nav>
+
+<main>
+  <div class="intro">
+    <h2>👋 Cum folosiți ghidul</h2>
+    <p>Fiecare <b>itinerariu</b> e gândit pe zone, ca să nu vă plimbați mult între opriri. Program tipic <b>10:00 → 18:00</b> (cele cu munte/ferry/apus depășesc). Pe la <b>13:00–15:00</b> aveți oprire la un restaurant ok ca preț. Apăsați 📍 <b>Maps</b> pe telefon (Android) ca să porniți navigarea, și ▶️ <b>Video</b> pentru un clip scurt cu locul.</p>
+    <div class="note">⚠️ <b>Despre linkuri:</b> linkurile Maps & YouTube sunt generate ca <b>căutare după numele atracției</b> — se deschid mereu corect și nu se „strică" în timp. Prețurile și programul sunt orientative (sezon 2024–25); verificați site-ul oficial înainte de plecare, mai ales pentru cele cu rezervare (Teide, Barranco del Infierno, Cueva del Viento, bărci, ferry).</p>
+  </div>
+
+  <h2 id="itinerarii" style="font-size:23px;margin:0 0 4px">🗺️ Itinerarii propuse</h2>
+  <p class="legend">10 zile de vacanță → ai de unde alege. Le poți combina sau reordona după vreme.</p>
+  <div id="itin-root"></div>
+
+  <h2 id="catalog" style="font-size:23px;margin:34px 0 4px">📍 Catalog complet — toate cele 50 de atracții</h2>
+  <p class="legend">Filtrează pe tip sau caută. Fiecare card are link Maps + Video.</p>
+  <input class="search" id="search" placeholder="🔎 Caută atracție (ex: Teide, plajă, piscină, Siam)...">
+  <div class="cat-filters" id="filters"></div>
+  <div class="grid" id="cat-root"></div>
+
+  <h2 id="restaurante" style="font-size:23px;margin:34px 0 4px">🍽️ Restaurante recomandate</h2>
+  <p class="legend">Insula principală — specific & facilități.</p>
+  <div class="grid" id="rest-root"></div>
+
+  <h2 id="shopping" style="font-size:23px;margin:34px 0 4px">🛒 Shopping: piețe & supermarketuri</h2>
+  <div class="grid" id="shop-root"></div>
+
+  <h2 id="logistica" style="font-size:23px;margin:34px 0 10px">⛴️ Logistică & tips</h2>
+  <div class="intro" id="logi-root"></div>
+</main>
+
+<footer>
+  Făcut cu 🌴 pentru gașca de 3 familii · Tenerife iulie 2026 ·
+  <span id="count"></span> atracții · Date: ghidul vostru personal
+</footer>
+
+<script>
+/* ---------- helpers: reliable search links ---------- */
+const mapsLink = (q) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q + " Tenerife");
+const mapsLinkRaw = (q) => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const ytLink   = (q) => "https://www.youtube.com/results?search_query=" + encodeURIComponent(q + " Tenerife 4k");
+
+/* ---------- ATTRACTIONS (50) ---------- */
+const A = {
+  siam:      {n:"Siam Park", area:"Adeje", t:"Parc acvatic", cat:"apa", d:"Cel mai bun parc acvatic din lume. Tower of Power, plajă artificială cu valuri uriașe. Perfect 5–15 ani.", pa:"45€", pc:"32€ (3-11)", h:"10:00–18:00"},
+  loro:      {n:"Loro Parque", area:"Puerto de la Cruz", t:"Zoo / parc tematic", cat:"animale", d:"Zoo renumit mondial: orci, delfini, lei de mare, pinguinariu imens.", pa:"42€", pc:"30€ (3-11)", h:"09:30–15:30"},
+  teide:     {n:"Teleferic Teide", area:"P.N. Teide", t:"Vulcan / natură", cat:"munte", d:"Cel mai înalt vârf din Spania. Peisaj lunar. Teleferic spre 3555 m.", pa:"~40€", pc:"~20€", h:"Teleferic 09:00–16:00"},
+  aqualand:  {n:"Aqualand Costa Adeje", area:"Costa Adeje", t:"Parc acvatic + delfinariu", cat:"apa", d:"Mai relaxat decât Siam, excelent pentru copiii mici. Spectacole cu delfini incluse.", pa:"34€", pc:"26€ (5-10) / 14€ (3-4)", h:"10:00–17:00"},
+  jungle:    {n:"Jungle Park (Las Águilas)", area:"Arona", t:"Zoo & aventură", cat:"animale", d:"Junglă reală cu poduri suspendate, spectacole cu păsări de pradă în libertate.", pa:"31€", pc:"23€ (5-10) / 13€ (3-4)", h:"10:00–17:30"},
+  vistas:    {n:"Playa de las Vistas", area:"Los Cristianos", t:"Plajă nisip auriu", cat:"plaja", d:"Nisip fin din Sahara, ape calme (diguri), ideală pentru copii mici. Facilități complete.", pa:"Gratuit", pc:"Șezlong ~5-7€", h:"Permanent"},
+  duque:     {n:"Playa del Duque", area:"Costa Adeje", t:"Plajă premium", cat:"plaja", d:"Plajă exclusivistă, apă turcoaz curată, hoteluri de lux în jur.", pa:"Gratuit", pc:"Șezlong ~10-15€", h:"Permanent"},
+  fanabe:    {n:"Playa de Fañabé", area:"Costa Adeje", t:"Plajă de familie", cat:"plaja", d:"Nisip vulcanic fin, sporturi acvatice, restaurante pe promenadă.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  tejita:    {n:"Playa de la Tejita", area:"El Médano", t:"Plajă naturală", cat:"plaja", d:"Lângă Montana Roja. Nisip roșiatic/auriu, deseori vânt, populară windsurf.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  medano:    {n:"Playa de El Médano", area:"El Médano", t:"Plajă sportivă", cat:"plaja", d:"Atmosferă boemă, ideală să privești surferii și să savurezi o înghețată.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  troya:     {n:"Playa de Las Américas (Troya)", area:"Las Américas", t:"Plajă animată", cat:"plaja", d:"Inima distracției din sud: muzică, baruri, valuri bune pentru lecții de surf.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  cristianos:{n:"Playa de Los Cristianos", area:"Los Cristianos", t:"Plajă urbană port", cat:"plaja", d:"Apă foarte liniștită lângă port, potrivită pentru bebeluși. Magazine aproape.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  sanjuan:   {n:"Playa de San Juan", area:"Guía de Isora", t:"Plajă tradițională", cat:"plaja", d:"Sat pescăresc, adăpostită de vânt, atmosferă locală relaxantă.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  alcala:    {n:"Playa de Alcalá", area:"Guía de Isora", t:"Plajă stâncoasă / țestoase", cat:"plaja", d:"Golfulețe de nisip negru. Excelent pentru snorkeling, uneori se văd țestoase.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  abama:     {n:"Playa Abama", area:"Guía de Isora", t:"Plajă ascunsă de lux", cat:"plaja", d:"Sub Ritz-Carlton. Golf spectaculos, ape smarald. Parcare gratuită la hotel.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  teresitas: {n:"Playa de las Teresitas", area:"San Andrés (Santa Cruz)", t:"Plajă cu palmieri", cat:"plaja", d:"Cea mai fotografiată plajă din nord, nisip auriu din Sahara, dig ce oprește valurile. Sigură 100% pentru copii.", pa:"Gratuit", pc:"Parcare gratuită", h:"Permanent"},
+  benijo:    {n:"Playa de Benijo (Anaga)", area:"Anaga", t:"Plajă sălbatică / foto", cat:"plaja", d:"Stânci dramatice din ocean, nisip negru. Spectaculoasă la apus. Curenți — atenție.", pa:"Gratuit", pc:"Nu pentru copii mici", h:"Permanent"},
+  jardin:    {n:"Playa Jardín", area:"Puerto de la Cruz", t:"Plajă proiectată de artist", cat:"plaja", d:"Creată de César Manrique, grădini botanice și cascade. Nisip vulcanic fin.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  arena:     {n:"Playa de la Arena", area:"Puerto de Santiago", t:"Nisip negru, steag albastru", cat:"plaja", d:"Una dintre cele mai negre plaje. Nisipul absoarbe căldura. Apă curată.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  bollullo:  {n:"Playa de Bollullo", area:"Puerto de la Cruz", t:"Plajă sălbatică izolată", cat:"plaja", d:"La baza unei stânci mari, drum de acces îngust, peisaj spectaculos.", pa:"Gratuit", pc:"Parcare ~3€", h:"Permanent"},
+  bajamar:   {n:"Piscine Naturale Bajamar", area:"Bajamar", t:"Piscine cu apă de ocean", cat:"piscine", d:"Piscine amenajate unde valurile se sparg în dig. Zonă sigură pentru copii, salvamari.", pa:"Gratuit", pc:"—", h:"~09:00–19:00"},
+  cangrejo:  {n:"Charco Isla Cangrejo (Los Gigantes)", area:"Los Gigantes", t:"Piscină naturală protejată", cat:"piscine", d:"Zid de beton protejează un golf de stâncă — piscină liniștită lângă valuri.", pa:"Gratuit", pc:"—", h:"Lumina zilei"},
+  caleton:   {n:"Piscinele El Caletón (Garachico)", area:"Garachico", t:"Formațiuni de lavă", cat:"piscine", d:"Create de erupția din 1706. Lavă solidificată transformată în piscine de poveste.", pa:"Gratuit", pc:"Salvamari", h:"10:00–18:00 (sezon)"},
+  viento:    {n:"Charco del Viento", area:"La Guancha", t:"Piscină naturală nord", cat:"piscine", d:"Brațe de lavă verzi/negre, ape extrem de limpezi, ideale pentru snorkeling.", pa:"Gratuit", pc:"—", h:"Lumina zilei"},
+  laja:      {n:"Charco de la Laja", area:"San Juan de la Rambla", t:"Piscină naturală ovală", cat:"piscine", d:"Bijuterie ascunsă în nord. Piscină naturală perfect ovală în stâncă vulcanică.", pa:"Gratuit", pc:"—", h:"Lumina zilei"},
+  gigantes:  {n:"Stâncile Los Gigantes", area:"Los Gigantes", t:"Faleză / peisaj", cat:"peisaj", d:"Ziduri uriașe de piatră ce se înalță din ocean până la 600 m.", pa:"Gratuit (uscat)", pc:"Barcă ~25-40€", h:"Permanent"},
+  masca:     {n:"Masca (Satul Ascuns)", area:"Buenavista", t:"Sat de munte / canion", cat:"munte", d:"„Machu Picchu\" al insulei. Drum spectaculos și strâmt prin munți, peisaje uluitoare.", pa:"Gratuit", pc:"Parcare limitată 2h", h:"Vizita dimineața devreme"},
+  anaga:     {n:"Munții Anaga & Pădurea Mercedes", area:"Anaga", t:"Pădure de lauri preistorică", cat:"munte", d:"Pădure subtropicală din era terțiară. Trasee ușoare (Sendero de los Sentidos) bune pentru copii.", pa:"Gratuit", pc:"—", h:"Lumina zilei"},
+  chipeque:  {n:"Mirador de Chipeque", area:"P.N. Teide", t:"Belvedere / mare de nori", cat:"peisaj", d:"Cel mai bun loc să vezi marea de nori sub Teide la apus. Magic pentru adolescenți.", pa:"Gratuit", pc:"—", h:"Recomandat la apus"},
+  infierno:  {n:"Barranco del Infierno", area:"Adeje", t:"Canion / drumeție", cat:"munte", d:"Traseu controlat printr-un canion spre o cascadă. Cască obligatorie.", pa:"11€", pc:"5.5€", h:"08:30–14:30 (rezervare!)"},
+  cueva:     {n:"Cueva del Viento", area:"Icod de los Vinos", t:"Tub de lavă subteran", cat:"munte", d:"Unul dintre cele mai mari tuburi vulcanice din lume. Tur cu ghid & lanterne. Sub 5 ani NU au voie.", pa:"20€", pc:"8.5€ (5-12)", h:"09:00–16:30 (rezervare)"},
+  roques:    {n:"Roques de García", area:"P.N. Teide", t:"Formațiuni stâncoase", cat:"munte", d:"Stânci faimoase la baza Teide (Roque Cinchado). Traseu plat și ușor.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  pino:      {n:"Pino Gordo (Vilaflor)", area:"Vilaflor", t:"Copac monumental", cat:"peisaj", d:"Cel mai bătrân și gros pin canarian. În drum spre Teide. Oprire scurtă de poze.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  tajao:     {n:"Arco de Tajao", area:"Arico", t:"Arc de piatră", cat:"peisaj", d:"Arc natural uriaș din rocă vulcanică. Lângă autostrada de sud, 5 min de mers.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  teno:      {n:"Punta de Teno & Farul", area:"Buenavista", t:"Cel mai vestic punct", cat:"peisaj", d:"Peisaj vulcanic pur, far roșu, vedere spre Los Gigantes. Acces auto restricționat ziua — autobuz.", pa:"Gratuit", pc:"Bus ~1€/sens", h:"Drum închis mașini 09:00–20:00 vara"},
+  laguna:    {n:"San Cristóbal de La Laguna", area:"La Laguna", t:"Oraș istoric UNESCO", cat:"oras", d:"Fosta capitală, arhitectură colonială colorată, străzi pietonale vibrante.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  garachico: {n:"Garachico", area:"Garachico", t:"Sat istoric de coastă", cat:"oras", d:"Orășel ce a supraviețuit parțial erupției. Străzi pietruite, biserici vechi.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  icod:      {n:"Icod de los Vinos & El Drago Milenario", area:"Icod", t:"Copac secular / cultură", cat:"oras", d:"Faimos pentru vinuri și pentru Dragonul Milenar, copac endemic de peste 800 ani.", pa:"~5€", pc:"~2.5€ (gratis din piață)", h:"09:00–20:00"},
+  santacruz: {n:"Santa Cruz de Tenerife", area:"Santa Cruz", t:"Capitală / cultură", cat:"oras", d:"Auditorio (gen Sydney), Plaza de España, piața exotică Nuestra Señora de África.", pa:"Gratuit", pc:"—", h:"Permanent"},
+  puerto:    {n:"Puerto de la Cruz & Lago Martiánez", area:"Puerto de la Cruz", t:"Complex piscine / oraș", cat:"oras", d:"Orașul turistic din nord. Lago Martiánez = complex uriaș de piscine cu apă de mare.", pa:"~5.5€", pc:"~2.5€", h:"10:00–19:00"},
+  whales:    {n:"Excursie balene & delfini", area:"Puerto Colón / Los Gigantes", t:"Experiență ocean", cat:"experienta", d:"Șanse 99% să vezi balene pilot și delfini liberi. Fascinant pentru copii.", pa:"30–50€", pc:"redus", h:"Plecări zilnice (rezervare)"},
+  stars:     {n:"Stargazing pe Teide", area:"P.N. Teide", t:"Experiență de noapte", cat:"experienta", d:"Unul dintre cele mai curate ceruri din lume. Calea Lactee clar, pe cont propriu sau cu ghid.", pa:"Gratuit / ghid 35-60€", pc:"—", h:"După 22:00"},
+  monkey:    {n:"Monkey Park", area:"Los Cristianos", t:"Zoo mic interactiv", cat:"animale", d:"Intri în cuști la lemuri/cobai uriași pentru a-i hrăni. Copiii îl adoră.", pa:"10€", pc:"5€ (5-12)", h:"09:30–16:00"},
+  submarine: {n:"Submarine Safaris", area:"San Miguel", t:"Aventură subacvatică", cat:"experienta", d:"Submarin galben real până la 30 m. Vezi epave, pisici de mare, scafandri.", pa:"~55€", pc:"~35€ (peste 2 ani)", h:"09:00–17:00"},
+  camel:     {n:"Camel Park (Chayofa)", area:"Chayofa", t:"Fermă de cămile", cat:"animale", d:"Fermă canariană: plimbări pe cămile, animale domestice. ÎNCHIS miercuri.", pa:"~20€", pc:"~10€", h:"10:00–15:30 (închis Mi)"},
+  garajonay: {n:"P.N. Garajonay (La Gomera)", area:"La Gomera", t:"Insula vecină / natură", cat:"insule", d:"Pădure de lauri mistică, deseori în ceață, în centrul La Gomera. Trasee de basm.", pa:"Gratuit (+bac)", pc:"—", h:"Lumina zilei"},
+  abrante:   {n:"Mirador de Abrante (La Gomera)", area:"Agulo, La Gomera", t:"Belvedere podea de sticlă", cat:"insule", d:"Platformă de sticlă suspendată deasupra prăpastiei, vedere spre ocean și Teide.", pa:"Liber (restaurant)", pc:"—", h:"11:00–18:00"},
+  sansebastian:{n:"San Sebastián de La Gomera", area:"La Gomera", t:"Cultură / istorie", cat:"insule", d:"Capitala insulei vecine, de unde Columb a plecat spre America. Torre del Conde, Casa de Colón.", pa:"Gratuit (+bac)", pc:"—", h:"Permanent"},
+  maspalomas:{n:"Dunele Maspalomas (Gran Canaria)", area:"Gran Canaria", t:"Insula vecină / peisaj", cat:"insule", d:"Dune uriașe de nisip fin ce amintesc de Sahara. Ferry rapid spre Gran Canaria.", pa:"Gratuit (+bac)", pc:"—", h:"Permanent"},
+  agaete:    {n:"Agaete & Las Salinas (Gran Canaria)", area:"Gran Canaria", t:"Insula vecină / piscine", cat:"insule", d:"Piscine naturale din rocă vulcanică conectate, ideale de înot în NV Gran Canariei.", pa:"Gratuit (+bac)", pc:"—", h:"Lumina zilei"},
+};
+
+/* ---------- RESTAURANTS ---------- */
+const REST = [
+  {n:"Restaurante Oasis", area:"Adeje (Sud)", spec:"Pui prăjit faimos (Pollo Adeje)", fac:"Ieftin, perfect familii cu copii (pui+cartofi+mojo). Spațiu mare, servire rapidă."},
+  {n:"Chiringuito Pirata", area:"El Médano / La Tejita", spec:"Bar de plajă / tapas casual", fac:"Direct pe plajă, mese pe nisip. Copiii se joacă lângă masă în timp ce gustați tapas."},
+  {n:"Mesón Castellano", area:"Playa de las Américas", spec:"Spaniol tradițional premium / tapas", fac:"Interior tradițional superb, cramă bogată. Pentru o cină festivă de grup în sud."},
+  {n:"Guachinche El Primero", area:"Santa Úrsula (Nord)", spec:"Canarian tradițional / local", fac:"Terasă rustică, porții imense pentru grupuri mari, prețuri mici. Carne la grătar & vin local."},
+  {n:"Restaurante El Burgado", area:"Buenavista del Norte", spec:"Pește proaspăt & fructe de mare", fac:"Direct pe stânci, sub plasă de pescar. Terasă spectaculoasă. Bun după Punta de Teno."},
+];
+
+/* ---------- SHOPPING ---------- */
+const SHOP = [
+  {n:"Mercadona", area:"Adeje / Las Chafiras (peste tot)", spec:"Supermarket", d:"Excelent pentru pește proaspăt, fructe, patiserie, prețuri bune. Provizii zilnice."},
+  {n:"Lidl", area:"Sud (mai multe)", spec:"Supermarket", d:"Foarte accesibil, bun pentru gustări pentru copii în drum spre plajă."},
+  {n:"Alcampo (C.C. Añaza)", area:"lângă autostrada spre Santa Cruz", spec:"Hipermarket", d:"Uriaș, perfect pentru cumpărături masive la începutul vacanței."},
+  {n:"Mercado del Agricultor San Miguel", area:"San Miguel de Abona", spec:"Piață agroalimentară", d:"Sâmbătă & duminică 08:00–13:30. Fructe exotice locale direct de la fermieri."},
+  {n:"Mercado Nuestra Señora de África", area:"Santa Cruz", spec:"Piață acoperită", d:"Plină de culoare: fructe, pește proaspăt, standuri de tapas. În capitală."},
+  {n:"Siam Mall", area:"Adeje", spec:"Mall / branduri", d:"Inima shoppingului din sud: branduri, restaurante, zonă pietonală."},
+  {n:"C.C. Plaza del Duque & Golden Mile", area:"Las Américas", spec:"Lux / plimbare", d:"Zonă de lux, fântâni luminate, ideal de plimbat seara."},
+];
+
+/* ---------- ITINERARIES ---------- */
+const ITIN = [
+  { id:"i1", zone:"Adeje · Sud", emoji:"🌊", title:"Aventura la Siam Park + plajă de lux",
+    badges:["🌊 Parc acvatic","👨‍👩‍👧 Toate vârstele","🏖️ Plajă","☀️ Zi întreagă"],
+    summary:"Zi de apă completă. Distanță minimă: Siam Park și Playa del Duque sunt la ~8 min unul de altul.",
+    steps:[
+      {k:"a", t:"10:00", ref:"siam", note:"Intrați la deschidere ca să prindeți toboganele fără coadă. Tower of Power & plaja cu valuri sunt highlight-urile. Lăsați minim 4 ore."},
+      {k:"meal", t:"14:00", ref:0, note:"Mâncați în parc sau ieșiți 10 min la Siam Mall (food court divers, mai ieftin)."},
+      {k:"a", t:"16:00", ref:"duque", note:"Relaxare pe nisip după adrenalină. Apă turcoaz, calmă. Alternativă: Playa de Fañabé alături."},
+    ]},
+  { id:"i2", zone:"Sud", emoji:"🦅", title:"Animale & plajă în sud (zi lejeră de familie)",
+    badges:["🦅 Animale","🏖️ Plajă","💶 Buget mic","👶 Copii mici"],
+    summary:"Jungle Park dimineața, prânz ieftin la Oasis, plajă liniștită după. Tot în triunghiul Arona–Adeje–Los Cristianos (max 15 min între opriri).",
+    steps:[
+      {k:"a", t:"10:00", ref:"jungle", note:"Spectacolul cu păsări de pradă în libertate e WOW pentru copii. Alternativă mai mică: Monkey Park (Los Cristianos)."},
+      {k:"meal", t:"13:00", ref:0, note:"Pollo Adeje clasic — ieftin, rapid, copiii adoră puiul cu cartofi și mojo."},
+      {k:"a", t:"15:00", ref:"vistas", note:"Apă calmă, nisip fin, salvamari, totul aproape. Perfectă pentru cei mici de 5 și 8 ani."},
+    ]},
+  { id:"i3", zone:"Centru · Teide", emoji:"🌋", title:"Teide & marea de nori (zi de munte, depășește 18:00)",
+    badges:["🌋 Vulcan","🥾 Drumeție ușoară","🌄 Apus","🌟 Opțional stele"],
+    summary:"Urcare graduală prin Vilaflor spre Teide. Zi mai lungă (munte) — meritați apusul. Luați haine groase: sus e răcoare chiar și vara.",
+    steps:[
+      {k:"a", t:"09:30", ref:"pino", note:"Oprire scurtă de poze în drum spre Teide — cel mai bătrân pin canarian."},
+      {k:"a", t:"11:00", ref:"roques", note:"Plimbare ușoară și plată printre stâncile faimoase de la baza Teide. Bună și pentru cel de 5 ani."},
+      {k:"a", t:"12:30", ref:"teide", note:"Telefericul urcă spre 3555 m. ⚠️ Rezervați online din timp — se epuizează. Verificați vântul (se închide la rafale)."},
+      {k:"meal", t:"14:30", ref:-1, note:"Prânz la Parador de las Cañadas del Teide (în crater) sau pachet propriu — sus sunt opțiuni puține și scumpe."},
+      {k:"a", t:"16:30", ref:"chipeque", note:"Așteptați marea de nori adunându-se sub vârf — spectaculos pentru pozele adolescentei de 15 ani."},
+      {k:"a", t:"22:00", ref:"stars", note:"OPȚIONAL, dacă mai aveți energie: cer fără egal pentru stele. Ori opriți într-un refugiu, ori tur cu ghid."},
+    ]},
+  { id:"i4", zone:"Vest", emoji:"🏔️", title:"Vestul sălbatic: Masca + Los Gigantes + plajă",
+    badges:["🏔️ Canion","🚤 Barcă","🏖️ Nisip negru"],
+    summary:"Plecați DEVREME (drumul spre Masca e strâmt și se aglomerează). Toate opririle sunt pe coasta de vest, apropiate.",
+    steps:[
+      {k:"a", t:"08:30", ref:"masca", note:"Mergeți înainte de 9:00 ca să prindeți parcare și drum liber. Șoferii cu rău de mașină — atenție la serpentine."},
+      {k:"a", t:"11:00", ref:"gigantes", note:"Faleza de 600 m. Opțional: tur cu barca (~25-40€) pentru delfini și pentru a vedea stâncile de jos."},
+      {k:"meal", t:"13:00", ref:-1, note:"Prânz pe coastă în Los Gigantes / Puerto de Santiago (multe terase cu vedere la ocean)."},
+      {k:"a", t:"15:00", ref:"arena", note:"Plajă cu nisip negru, steag albastru, apă curată. Sau piscina naturală Charco Isla Cangrejo alături."},
+    ]},
+  { id:"i5", zone:"Sud-Est", emoji:"🪁", title:"Piață locală + plajele cu vânt (El Médano)",
+    badges:["🛍️ Piață","🏖️ Plajă","🪁 Surf/vânt","💶 Buget mic"],
+    summary:"Cel mai bine SÂMBĂTĂ/DUMINICĂ (piața e deschisă atunci). Tot sud-estul, distanțe scurte pe autostradă.",
+    steps:[
+      {k:"a", t:"09:00", ref:"tajao", note:"Oprire rapidă (5 min de la autostradă) — arc natural de piatră, poze faine."},
+      {k:"free", t:"09:45", title:"Mercado del Agricultor San Miguel", q:"Mercado del Agricultor San Miguel de Abona", note:"Fructe exotice locale (banane canariene, papaya), brânzeturi, gustări. Doar weekend 08:00–13:30."},
+      {k:"a", t:"11:30", ref:"tejita", note:"Plajă largă lângă Montana Roja. Vânt plăcut pe căldură. Bună de privit kitesurfing."},
+      {k:"meal", t:"13:30", ref:1, note:"Tapas direct pe nisip — copiii se joacă lângă masă."},
+      {k:"a", t:"15:00", ref:"medano", note:"Plimbare pe promenadă boemă, înghețată, privit surferii. Final relaxat de zi."},
+    ]},
+  { id:"i6", zone:"Nord", emoji:"🐬", title:"Nordul verde: Loro Parque + Puerto de la Cruz",
+    badges:["🐬 Zoo","🏖️ Plajă","🏊 Piscine","🚗 Drum ~1h"],
+    summary:"E mai departe (~1h cu mașina din sud) dar merită. Loro deschide la 9:30 și se închide la 15:30 — mergeți dimineața.",
+    steps:[
+      {k:"a", t:"09:30", ref:"loro", note:"Orci, delfini, pinguinariu. ⚠️ Se închide la 15:30 — fiți acolo la deschidere. Twin Ticket cu Siam = mai ieftin."},
+      {k:"meal", t:"13:00", ref:-1, note:"Prânz în Puerto de la Cruz, centrul vechi — multe terase, prețuri ok."},
+      {k:"a", t:"15:00", ref:"jardin", note:"Plajă proiectată de César Manrique, cu grădini și cascade. Nisip vulcanic."},
+      {k:"a", t:"16:30", ref:"puerto", note:"OPȚIONAL: Lago Martiánez — complex de piscine cu apă de mare, super pentru copii (~5.5€ adult)."},
+    ]},
+  { id:"i7", zone:"Nord", emoji:"🌳", title:"Patrimoniu & piscine de lavă: Icod + Garachico",
+    badges:["🌳 Cultură","🏊 Piscine naturale","🌋 Lavă","🚗 Drum ~1h"],
+    summary:"Combinație de sate istorice și înot în piscine vulcanice. Opririle din nord-vest sunt apropiate între ele.",
+    steps:[
+      {k:"a", t:"10:00", ref:"icod", note:"Vedeți Dragonul Milenar (800+ ani). Se poate admira și gratis din piața de sus."},
+      {k:"a", t:"11:30", ref:"cueva", note:"OPȚIONAL (doar fetele >5 ani): tub de lavă subteran cu ghid. ⚠️ Rezervare din timp. Sub 5 ani nu au voie — băiețelul rămâne cu un adult sus."},
+      {k:"meal", t:"13:00", ref:-1, note:"Prânz în Garachico, în piațeta veche lângă ocean."},
+      {k:"a", t:"14:30", ref:"caleton", note:"Piscine de lavă din erupția 1706, cu salvamari. Înot de poveste, sigur pentru copii."},
+      {k:"a", t:"16:30", ref:"viento", note:"OPȚIONAL: Charco del Viento — ape limpezi pentru snorkeling. Doar dacă marea e calmă."},
+    ]},
+  { id:"i8", zone:"Nord-Est · Anaga", emoji:"🌲", title:"Pădurea Anaga + La Laguna + Las Teresitas",
+    badges:["🌲 Pădure","🏛️ UNESCO","🏖️ Plajă sigură","🥾 Drumeție ușoară"],
+    summary:"Natură preistorică, oraș UNESCO și cea mai sigură plajă din nord. Traseu circular în nord-est.",
+    steps:[
+      {k:"a", t:"10:00", ref:"anaga", note:"Sendero de los Sentidos — traseu ușor și umbros, perfect pentru copii. Pădure din era terțiară."},
+      {k:"a", t:"12:30", ref:"laguna", note:"Plimbare prin fosta capitală colonială, străzi pietonale colorate. Prânz aici (vezi mai jos)."},
+      {k:"meal", t:"13:30", ref:-1, note:"Multe restaurante în centrul pietonal La Laguna — atmosferă studențească, prețuri bune."},
+      {k:"a", t:"15:30", ref:"teresitas", note:"Nisip auriu din Sahara, dig ce oprește valurile — 100% sigură pentru cei mici. Parcare gratuită."},
+    ]},
+  { id:"i9", zone:"Ferry · La Gomera", emoji:"⛴️", title:"Excursie pe insula vecină La Gomera",
+    badges:["⛴️ Ferry 50 min","🌲 Natură","🏛️ Istorie","💶 ~120-180€/familie+mașină"],
+    summary:"Zi întreagă pe insula vecină. Ferry rapid din Los Cristianos (50 min). ⚠️ Confirmați la rent-a-car că aveți voie să scoateți mașina de pe insulă (taxă/asigurare).",
+    steps:[
+      {k:"free", t:"08:00", title:"Ferry Los Cristianos → San Sebastián", q:"Fred Olsen Express Los Cristianos ferry terminal", note:"Fred. Olsen Express sau Naviera Armas. Rezervați online. 50 min traversare. Luați mașina pentru flexibilitate."},
+      {k:"a", t:"10:00", ref:"sansebastian", note:"Orașul lui Columb. Torre del Conde, Casa de Colón. Cafea în port."},
+      {k:"a", t:"11:30", ref:"abrante", note:"Belvedere cu podea de sticlă deasupra prăpastiei — adrenalină și poze spectaculoase."},
+      {k:"meal", t:"13:30", ref:-1, note:"Prânz chiar la restaurantul de la Mirador de Abrante (Agulo) — vedere uluitoare."},
+      {k:"a", t:"15:00", ref:"garajonay", note:"Pădurea de lauri mistică, deseori în ceață. Trasee scurte de basm înainte de ferry-ul de retur."},
+      {k:"free", t:"17:30", title:"Ferry retur → Los Cristianos", q:"San Sebastian de la Gomera ferry terminal", note:"Verificați ultima cursă din ziua respectivă când cumpărați biletele!"},
+    ]},
+  { id:"i10", zone:"Sud", emoji:"🐪", title:"Zi lejeră pentru copiii mici: Aqualand + Camel Park",
+    badges:["🌊 Apă lejeră","🐬 Delfini","🐪 Cămile","👶 5–8 ani"],
+    summary:"Ziua ideală când cei mari vor relax și cei mici energie. Tot în sud, aproape de cazare. ⚠️ Camel Park e ÎNCHIS miercurea.",
+    steps:[
+      {k:"a", t:"10:00", ref:"aqualand", note:"Mai blând decât Siam — perfect pentru 5 și 8 ani. Spectacol cu delfini inclus."},
+      {k:"meal", t:"14:00", ref:0, note:"Oasis din nou (e aproape) sau o terasă în Costa Adeje."},
+      {k:"a", t:"15:30", ref:"camel", note:"Plimbare pe cămile + animale domestice. Alternativă: Monkey Park (Los Cristianos) dacă e miercuri."},
+    ]},
+];
+
+/* ---------- RENDER ---------- */
+const el = (t,c,h)=>{const e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;};
+const factHtml = (a) => `
+  <div class="facts">
+    <span class="fact">🕒 <b>${a.h}</b></span>
+    <span class="fact">👤 Adult: <b>${a.pa}</b></span>
+    ${a.pc && a.pc!=="—" ? `<span class="fact">🧒 Copil: <b>${a.pc}</b></span>` : ""}
+    <span class="fact">📍 ${a.area}</span>
+  </div>`;
+const acts = (name) => `
+  <div class="acts">
+    <a class="btn btn-map" target="_blank" rel="noopener" href="${mapsLink(name)}">📍 Maps</a>
+    <a class="btn btn-yt" target="_blank" rel="noopener" href="${ytLink(name)}">▶️ Video</a>
+  </div>`;
+
+/* TOC */
+const tocItems = [["#itinerarii","🗺️ Itinerarii"],["#catalog","📍 Atracții"],["#restaurante","🍽️ Restaurante"],["#shopping","🛒 Shopping"],["#logistica","⛴️ Logistică"]];
+ITIN.forEach((it,i)=> tocItems.splice(1+i,0,["#"+it.id, it.emoji+" "+(i+1)]));
+const toc = document.getElementById("toc");
+tocItems.forEach(([h,t])=>{const a=el("a",null,t); a.href=h; toc.appendChild(a);});
+
+/* Itineraries */
+const iroot = document.getElementById("itin-root");
+ITIN.forEach((it,idx)=>{
+  const sec = el("section","itin"); sec.id = it.id;
+  const head = el("div","itin-head");
+  head.appendChild(el("h2",null,`<span class="zone">${it.zone}</span> ${it.emoji} ${idx+1}. ${it.title}`));
+  const b = el("div","badges"); it.badges.forEach(x=>b.appendChild(el("span","badge",x))); head.appendChild(b);
+  head.appendChild(el("div","summary",it.summary));
+  sec.appendChild(head);
+  const tl = el("div","timeline");
+  it.steps.forEach(s=>{
+    const step = el("div","step"+(s.k==="meal"?" meal":""));
+    step.appendChild(el("div","time",s.t));
+    const body = el("div","step-body");
+    if(s.k==="a"){
+      const a = A[s.ref];
+      body.appendChild(el("div","kind",a.t));
+      body.appendChild(el("h3",null,a.n));
+      body.innerHTML += factHtml(a);
+      if(s.note) body.appendChild(el("p",null,"💡 "+s.note));
+      body.innerHTML += acts(a.n);
+    } else if(s.k==="meal"){
+      const r = REST[s.ref];
+      body.appendChild(el("div","kind","🍽️ Prânz · "+(s.ref===-1?"recomandare zonă":r.spec)));
+      body.appendChild(el("h3",null, s.ref===-1 ? "Prânz în zonă" : r.n));
+      if(s.ref!==-1){ body.innerHTML += `<div class="facts"><span class="fact">📍 ${r.area}</span></div>`; }
+      if(s.note) body.appendChild(el("p",null,"💡 "+s.note));
+      if(s.ref!==-1) body.innerHTML += acts(r.n);
+    } else {
+      body.appendChild(el("div","kind","📌 Oprire"));
+      body.appendChild(el("h3",null,s.title));
+      if(s.note) body.appendChild(el("p",null,"💡 "+s.note));
+      body.innerHTML += `<div class="acts"><a class="btn btn-map" target="_blank" rel="noopener" href="${mapsLinkRaw(s.q)}">📍 Maps</a></div>`;
+    }
+    step.appendChild(body);
+    tl.appendChild(step);
+  });
+  sec.appendChild(tl);
+  iroot.appendChild(sec);
+});
+
+/* Catalog with filters + search */
+const CATS = {todos:"Toate",plaja:"🏖️ Plaje",piscine:"🏊 Piscine naturale",apa:"🌊 Parcuri acvatice",animale:"🦅 Animale",munte:"🌋 Munte & vulcan",peisaj:"🌄 Peisaje",oras:"🏛️ Orașe & sate",experienta:"⭐ Experiențe",insule:"🏝️ Insule vecine"};
+const filters = document.getElementById("filters");
+let activeCat = "todos";
+Object.entries(CATS).forEach(([k,v],i)=>{
+  const btn = el("button",i===0?"active":null,v); btn.dataset.cat=k;
+  btn.onclick=()=>{activeCat=k;[...filters.children].forEach(c=>c.classList.toggle("active",c.dataset.cat===k));renderCat();};
+  filters.appendChild(btn);
+});
+const catRoot = document.getElementById("cat-root");
+const searchBox = document.getElementById("search");
+searchBox.oninput = renderCat;
+function renderCat(){
+  const q = searchBox.value.trim().toLowerCase();
+  catRoot.innerHTML="";
+  Object.values(A).forEach(a=>{
+    if(activeCat!=="todos" && a.cat!==activeCat) return;
+    if(q && !(a.n+" "+a.t+" "+a.area+" "+a.d).toLowerCase().includes(q)) return;
+    const c = el("div","card");
+    c.appendChild(el("div","tag",a.t));
+    c.appendChild(el("h3",null,a.n));
+    c.appendChild(el("p",null,a.d));
+    c.innerHTML += factHtml(a);
+    c.innerHTML += acts(a.n);
+    catRoot.appendChild(c);
+  });
+  if(!catRoot.children.length) catRoot.appendChild(el("p","legend","Nimic găsit — încearcă alt cuvânt."));
+}
+renderCat();
+
+/* Restaurants */
+const rroot = document.getElementById("rest-root");
+REST.forEach(r=>{
+  const c = el("div","card");
+  c.appendChild(el("div","tag",r.spec));
+  c.appendChild(el("h3",null,r.n));
+  c.appendChild(el("p",null,`📍 ${r.area}<br><br>${r.fac}`));
+  c.innerHTML += `<div class="acts"><a class="btn btn-map" target="_blank" rel="noopener" href="${mapsLink(r.n)}">📍 Maps</a></div>`;
+  rroot.appendChild(c);
+});
+
+/* Shopping */
+const sroot = document.getElementById("shop-root");
+SHOP.forEach(s=>{
+  const c = el("div","card");
+  c.appendChild(el("div","tag",s.spec));
+  c.appendChild(el("h3",null,s.n));
+  c.appendChild(el("p",null,`📍 ${s.area}<br><br>${s.d}`));
+  c.innerHTML += `<div class="acts"><a class="btn btn-map" target="_blank" rel="noopener" href="${mapsLink(s.n)}">📍 Maps</a></div>`;
+  sroot.appendChild(c);
+});
+
+/* Logistics */
+document.getElementById("logi-root").innerHTML = `
+  <h2 style="margin-top:0">⛴️ Bac către insulele vecine</h2>
+  <p>Din <b>Portul Los Cristianos</b> ajungeți ușor pe La Gomera sau Gran Canaria.</p>
+  <ul style="font-size:14px;line-height:1.7">
+    <li><b>Operatori:</b> Fred. Olsen Express (<a href="https://www.fredolsen.es" target="_blank" rel="noopener">fredolsen.es</a>) și Naviera Armas (<a href="https://www.navieraarmas.com" target="_blank" rel="noopener">navieraarmas.com</a>).</li>
+    <li><b>La Gomera:</b> Los Cristianos → San Sebastián = doar 50 min.</li>
+    <li><b>Cost orientativ:</b> ~120–180€ dus-întors pentru o familie (2 adulți + 1-2 copii + mașină).</li>
+    <li>⚠️ <b>Esențial:</b> verificați că firma de rent-a-car permite scoaterea mașinii de pe insulă (de obicei taxă mică / asigurare suplimentară).</li>
+  </ul>
+  <h2>🚗 Tips generale</h2>
+  <ul style="font-size:14px;line-height:1.7">
+    <li>Mașina e obligatorie pentru itinerariile din nord/vest — distanțele sunt mari.</li>
+    <li>Provizii ieftine de la <b>Mercadona / Lidl</b> Adeje — economisiți mult față de restaurante zilnice.</li>
+    <li>Cazarea Royal Tenerife Country Club e lângă aeroport (avioane ocazional) dar la 12–15 min de plajele animate.</li>
+    <li>Rezervări obligatorii din timp: <b>Teleferic Teide, Barranco del Infierno, Cueva del Viento, tururi cu barca, ferry</b>.</li>
+    <li>Sus pe Teide e răcoare chiar și în iulie — luați o geacă.</li>
+  </ul>`;
+
+document.getElementById("count").textContent = Object.keys(A).length;
+</script>
+</body>
+</html>
